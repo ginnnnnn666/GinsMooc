@@ -1,0 +1,65 @@
+/* header-nav */
+.header-nav {
+    flex: 1;
+    flex-direction: row;
+    display: flex;
+    padding: 0 20px;
+    box-shadow: rgb(231, 234, 239) 0px -1px 0px 0px inset;
+}
+.header-nav__center {
+    flex: 1;
+}
+.header-nav__end {
+    display: flex;
+    align-items: center;
+    justify-self: flex-end;
+}
+
+/* header-nav__end */
+.header-nav__end img {
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.header-nav__end-ali {
+    margin-right: 13px;
+    cursor: default !important;
+}
+
+/* 建议反馈 */
+.feedback-window {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    top: 58px;
+    right: 58px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 2px 4px 0 rgb(54 58 80 / 32%);
+    border-radius: 8px;
+    background-color: #fff;
+    opacity: 1;
+    transition: all 0.2s;
+    z-index: 1;
+}
+.feedback-window.hidden {
+    opacity: 0 !important;
+}
+.feedback-window textarea {
+    flex: 1;
+    resize: none;
+}
+.feedback-window a {
+    width: 100px;
+    height: 30px;
+    margin-top: 8px;
+    align-self: flex-end;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+    background-color: rgb(30,139,205);
+    cursor: pointer;
+}

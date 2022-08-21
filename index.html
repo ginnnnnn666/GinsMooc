@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer" />
+    <title>GinsMooc</title>
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon" />
+    <style cssr-id="naive-ui/global">
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            font-family: Roboto, "San Francisco", "Helvetica Neue", Helvetica, Arial, PingFangSC-Light, "Hiragina Sans GB", "WenQuanYi Micro Hei", "microsoft yahei ui", "microsoft yahei", sans-serif;
+            line-height: 1.6;
+            overflow: hidden;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body input {
+            font-family: inherit;
+            font-size: inherit;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./css/layout.css">
+    <link rel="stylesheet" type="text/css" href="./css/header/header.css">
+    <link rel="stylesheet" type="text/css" href="./css/sidebar/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="./css/main/main.css">
+    <script src="https://cdn.staticfile.org/jquery/2.0.3/jquery.min.js"></script>
+    <script src="./src/index.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-nav">
+                <div class="header-nav__start"></div>
+                <div class="header-nav__center"></div>
+                <div class="header-nav__end">
+                    <img class="header-nav__end-feedback" src="./image/feedback.svg" style="border-radius:0;">
+                    <div class="feedback-window hidden">
+                        <textarea id="feedback-editor" maxlength="200" placeholder="在这里输入建议或反馈，如果是反馈请说明出现问题的具体课程、哪个测验/作业/考试。最大长度为200字。"></textarea>
+                        <a id="feedback-submit">提交</a>
+                    </div>
+                    <img class="header-nav__end-extension" src="./image/extension.svg" style="border-radius:0;">
+                    <img class="header-nav__end-help" src="./image/help.svg">
+                    <img class="header-nav__end-github" src="./image/github.svg">
+                    <img class="header-nav__end-ali" src="./image/icon.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="sidebar">
+                <div class="sidebar__header">
+                    <img class="sidebar__header-title" src="./image/Arcaea_Story_Last2_epilogue_cg_part.png">
+                </div>
+                <div class="sidebar__body">
+                    <ul class="sidebar__body-list"></ul>
+                </div>
+                <div class="sidebar__footer">
+                    <div class="sidebar__footer-fold">
+                        <input type="checkbox" name="sidebar-fold" id="sidebar-fold">
+                        <label for="sidebar-fold">
+                            <div class="fold-icon"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="main__header">
+                    <div class="main__header-title"></div>
+                    <div class="main__header-switch-column">
+                        <input type="checkbox" name="switch-column" id="switch-column">
+                        <label for="switch-column">
+                            <svg viewBox="0 0 20 20" height="20px" width="20px">
+                                <line class="double" x1="0" y1="1" x2="8" y2="1"></line>
+                                <line class="double" x1="0" y1="10" x2="8" y2="10"></line>
+                                <line class="double" x1="0" y1="19" x2="8" y2="19"></line>
+                                <line class="double" x1="11" y1="1" x2="19" y2="1"></line>
+                                <line class="double" x1="11" y1="10" x2="19" y2="10"></line>
+                                <line class="double" x1="11" y1="19" x2="19" y2="19"></line>
+                                <line class="single" x1="0" y1="1" x2="19" y2="1"></line>
+                                <line class="single" x1="0" y1="10" x2="19" y2="10"></line>
+                                <line class="single" x1="0" y1="19" x2="19" y2="19"></line>
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                <div class="main__body"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

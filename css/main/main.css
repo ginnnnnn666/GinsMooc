@@ -1,0 +1,331 @@
+/* main */
+.main__header {
+    height: 50px;
+    display: flex;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+.main__body {
+    flex: 1;
+    background-color: rgb(243, 244, 247);
+    overflow: auto;
+}
+
+/* main__header */
+.main__header-title {
+    flex: 1;
+    height: 30px;
+    font-size: 1.17em;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.9);
+    text-align: left;
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.main__header-switch-column {
+    display: none;
+    margin-right: 20px;
+    height: 20px;
+    width: 20px;
+    align-self: center;
+}
+.main__header-switch-column.display {
+    display: block;
+}
+.main__header-switch-column label {
+    cursor: pointer;
+}
+.main__header-switch-column label svg line {
+    stroke-width: 2px;
+    stroke: rgb(30,139,205);
+    transition: all 0.2s;
+}
+.main__header-switch-column label svg .single {
+    stroke-dasharray: 19;
+}
+.main__header-switch-column label svg .double {
+    stroke-dasharray: 8;
+}
+.main__header-switch-column input {
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+.main__header-switch-column input + label svg .double {
+    stroke-dashoffset: 0;
+}
+.main__header-switch-column input + label.true svg .double {
+    transition-delay: 0.2s;
+}
+.main__header-switch-column input + label svg .single {
+    stroke-dashoffset: 19;
+}
+.main__header-switch-column input:checked + label svg .double {
+    stroke-dashoffset: 8;
+}
+.main__header-switch-column input:checked + label svg .single {
+    stroke-dashoffset: 0;
+    transition-delay: 0.2s;
+}
+/* main__body-test-list*/
+.main__body-test-list {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 80px);
+    margin: 20px 20px 0 20px;
+    padding: 20px 200px 20px 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px 0 rgb(54 58 80 / 32%);
+    transition: all 0.2s;
+    overflow: auto;
+}
+.main__body-test-list::-webkit-scrollbar, .main__body-test-detail::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border-radius: 9px;
+}
+.main__body-test-list::-webkit-scrollbar-thumb, .main__body-test-detail::-webkit-scrollbar-thumb {
+    background-color: #f2f2f2;
+    border-radius: 0;
+    background-clip: content-box;
+    border: 4px solid transparent;
+}
+.main__body-test-list li {
+    max-width: 700px;
+    padding: 20px;
+}
+.test__title {
+    padding-left: 12px;
+    margin-bottom: 12px;
+    font-size: 1.17em;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid rgb(207, 213, 222);
+}
+.test__sublist li {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 10px 40px;
+}
+.test__info-title {
+    font-size: 1.05em;
+    color: rgba(0, 0, 0, 0.7);
+    margin-right: 20px;
+}
+.test__info-title:hover {
+    color: rgba(35,120,255,0.8);
+}
+.test__info-time {
+    flex: 1;
+    color: rgb(153, 153, 153);
+}
+/* main__body-test__detail */
+.main__body-test-detail {
+    max-height: 100%;
+    display: flex;
+    align-items: flex-start;
+    overflow-y: auto;
+}
+.main__body-test-detail::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
+.detail--left, .detail--right {
+    flex: 1;
+    padding-right: 20px;
+    max-width: min(100%, max(700px, 50%));
+    overflow: visible;
+    transition: all 0.2s;
+}
+.detail--left {
+    padding-left: 20px;
+}
+.detail--left section.right {
+    display: none;
+}
+.main__body-test-detail.single .detail--left section.right {
+    display: block;
+}
+.main__body-test-detail.single .detail--right section {
+    display: none;
+}
+.main__body-test-detail section {
+    position: relative;
+    padding: 20px 40px;
+    margin-top: 20px;
+    font-family: "PingFang SC", -apple-system, "Helvetica Neue", Helvetica, BlinkMacSystemFont, "Microsoft YaHei", tahoma, Arial, "Open Sans", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgb(54 58 80 / 32%);
+    transition: all 0.2s;
+    overflow: hidden;
+}
+.main__body-test-detail section:hover {
+    transform: scale(1.02);
+}
+.question__seq, .question__title {
+    line-height: 27px;
+    font-size: 18px;
+    word-break: break-word;
+    -webkit-font-smoothing: antialiased;
+}
+.question__seq {
+    float: left;
+    margin-right: 8px;
+    font-weight: 700;
+}
+.question__title {
+    display: inline;
+    margin-right: 4px;
+}
+.question__body {
+    padding-top: 14px;
+    line-height: 21px;
+}
+.question__option-radio-input {
+    position: absolute;
+    box-sizing: border-box;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0px, 0px, 0px, 0px);
+    white-space: nowrap;
+    cursor: default;
+    border: 0;
+}
+.question__option-title {
+    box-sizing: border-box;
+    display: block;
+    margin: 0 -8px;
+    padding: 7px 8px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+.question__option-checkbox-input:checked + .question__option-title,
+.question__option-radio-input:checked + .question__option-title {
+    color: rgba(35,120,255,1);
+}
+.question__option-radio-input:checked + .question__option-title .radio-box {
+    border: 4px solid #018fff !important;
+}
+.question__option.true .question__option-radio-input:checked + .question__option-title {
+    background-color: rgba(0, 255, 0, 0.15) !important;
+}
+.question__option.false .question__option-radio-input:checked + .question__option-title {
+    background-color: rgba(255, 0, 0, 0.15) !important;
+}
+.question__body.true .question__option.true .question__option-checkbox-input:checked + .question__option-title {
+    background-color: rgba(0, 255, 0, 0.15) !important;
+}
+.question__option-title::before {
+    background-color: #2863f3;
+}
+.question__option-title:hover {
+    background-color: rgba(35,120,255,0.1);
+}
+.radio-box {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 16px;
+    width: 16px;
+    left: 8px;
+    top: 50%;
+    position: absolute;
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: all 0.2s;
+    transform: matrix(1, 0, 0, 1, 0, -8);
+}
+.question__tag {
+    display: inline-block;
+    vertical-align: 2px;
+    margin-left: 4px;
+    padding: 2px 7px;
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 3px;
+    font-size: 14px;
+}
+.question__option-checkbox-input {
+    box-sizing: border-box;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+.check-box {
+    display: inline-block;
+    height: 16px !important;
+    width: 16px !important;
+    top: 50%;
+    left: 8px;
+    box-sizing: border-box;
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    transform: matrix(1, 0, 0, 1, 0, -8);
+    transform: translateY(-50%);
+}
+.question__option-checkbox-input:checked + .question__option-title .check-box {
+    background-color: rgba(35,120,255,1);
+    border-color: rgba(35,120,255,1);
+}
+.check-box-icon {
+    height: 9px;
+    width: 11px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    fill: none;
+    stroke-width: 2px;
+    stroke-dasharray: 16, 16;
+    stroke-dashoffset: 16;
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.question__text-input {
+    margin-top: 9px;
+    padding: 0 20px;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.15;
+    overflow: visible;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #cbd5de;
+    transition: all 0.2s;
+}
+.question__text-input.true {
+    background-color: rgba(0, 255, 0, 0.15);
+}
+.question__text-input:focus {
+    border-color: rgba(35,120,255,1);;
+}
+.question__option-checkbox-input:checked + .question__option-title .check-box .check-box-icon {
+    stroke: rgba(255,255,255,1);
+    stroke-dashoffset: 0;
+}
+.question__option-title p {
+    margin: 0;
+    padding-left: 24px;
+    font-size: 14px;
+    line-height: 21px;
+}

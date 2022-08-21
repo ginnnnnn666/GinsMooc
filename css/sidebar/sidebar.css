@@ -1,0 +1,112 @@
+/* sidebar */
+.sidebar__header {
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar__body {
+    flex: 1;
+    padding: 0 8px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.sidebar__body::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border-radius: 9px;
+}
+.sidebar__body::-webkit-scrollbar-thumb {
+    background-color: #f2f2f2;
+    border-radius: 0;
+    background-clip: content-box;
+    border: 4px solid transparent;
+}
+.sidebar__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 55px;
+    border-top: 1px solid rgb(231, 234, 239);
+}
+
+/* sidebar__header*/
+.sidebar__header-title {
+    width: 355px;
+    cursor: pointer;
+}
+
+/* sidebar__body */
+.sidebar__body-list li {
+    padding: 0 8px;
+}
+.sidebar__body-list li :hover {
+    background-color: rgba(0,163,255, 0.2);
+}
+.sidebar__body-list li :active {
+    transform: scale(0.98);
+}
+.course-card {
+    margin: 8px 0;
+    padding: 18px 12px 18px 24px;
+    display: flex;
+    border-radius: 8px;
+    cursor: default;
+}
+.sidebar__body-list .is-selected .course-card {
+    background-color: rgba(0,163,255, 0.5) !important;
+}
+/* course-card detail */
+.course-card__img {
+    border-radius: 8px;
+    margin-right: 16px;
+}
+.course-card__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent !important;
+}
+.sidebar.fold .sidebar__body .sidebar__body-list li a .course-card__info {
+    display: none;
+}
+.course-card__info--name {
+    flex: 1;
+    width: 186px;
+    font-size: 1.125em;
+    color: rgb(51, 51, 51);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background-color: transparent !important;
+}
+.course-card__info--school {
+    font-size: 0.75em;
+    color: rgb(153, 153, 153);
+    background-color: transparent !important;
+}
+
+/* sidebar__footer */
+.sidebar__footer-fold {
+    width: 40px;
+}
+.sidebar__footer-fold input {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    position: absolute;
+}
+.sidebar__footer-fold label {
+    cursor: pointer;
+}
+.sidebar__footer-fold .fold-icon{
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    background-image: url(../../image/fold.png);
+}
+.sidebar__footer-fold input:checked + label .fold-icon {
+    background-image: url(../../image/open.png);
+}
