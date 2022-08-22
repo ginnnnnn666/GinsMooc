@@ -6,8 +6,6 @@
 
 网页地址：https://ginnnnnn.top/mooc/
 
-插件地址：https://ginnnnnn.top/mooc/extension/
-
 **需要使用插件更新课程/测验列表，插件提供自动作答/互评功能。**
 
 1. 点击题目即可显示答案，点击上方大标题（测验名称）可显示全部答案
@@ -20,17 +18,18 @@
 
 # 插件
 
+下载地址：https://ginnnnnn.top/mooc/extension/download/GinsMooc.zip
+
 ## 功能说明
 
 - 获取中国大学慕课测验、作业、考试的参考答案，不包括 OJ 习题
 - 自动完成互评中的评分、点评
 - 不支持 “已关闭该学期” 的课程，除非在被关闭前就已经被查询过
-- [下载地址](https://ginnnnnn.top/mooc/extension/download/GinsMooc.zip)
 
-<img src="../image/prepare.png">
-<img src="../image/quiz.png">
-<img src="../image/homework.png">
-<img src="../image/evaluate.png">
+<img src="./image/prepare.png">
+<img src="./image/quiz.png">
+<img src="./image/homework.png">
+<img src="./image/evaluate.png">
 
 ## 安装教程
 
