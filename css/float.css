@@ -1,0 +1,61 @@
+.hidden {
+    display: none !important;
+}
+.float {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.add-course-window {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 12px 20px 12px 20px;
+    box-shadow: 0 2px 4px 0 rgb(54 58 80 / 32%);
+    background-color: #fff;
+}
+.add-course-close {
+    align-self: flex-end;
+    margin-bottom: 12px;
+    line-height: 0;
+    cursor: pointer;
+}
+.add-course-close svg line {
+    stroke-width: 2px;
+    stroke: rgb(30,139,205);
+    transition: all 0.2s;
+}
+.add-course-window a {
+    width: 100px;
+    height: 30px;
+    margin-top: 8px;
+    align-self: flex-end;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+    background-color: rgb(30,139,205);
+    cursor: pointer;
+}
+
+
+.help {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.help img {
+    position: absolute;
+    cursor: pointer;
+}
+.help-1 {
+    box-shadow: 0 2px 4px 0 rgb(54 58 80 / 32%);
+}
+.help-2 {
+    border: 2px solid #fff;
+}

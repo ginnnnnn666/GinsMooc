@@ -25,9 +25,8 @@
 }
 .sidebar__footer {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     height: 55px;
     border-top: 1px solid rgb(231, 234, 239);
 }
@@ -97,6 +96,9 @@
     height: 1px;
     margin: -1px;
     position: absolute;
+    clip: rect(0px, 0px, 0px, 0px);
+    box-sizing: border-box;
+    border: 0;
 }
 .sidebar__footer-fold label {
     cursor: pointer;
@@ -104,9 +106,19 @@
 .sidebar__footer-fold .fold-icon{
     width: 20px;
     height: 20px;
-    margin-left: 20px;
+    margin-right: 20px;
     background-image: url(../../image/fold.png);
 }
 .sidebar__footer-fold input:checked + label .fold-icon {
     background-image: url(../../image/open.png);
+}
+.sidebar__add-course {
+    margin-left: 20px;
+    line-height: 0;
+    cursor: pointer;
+}
+.sidebar__add-course svg line {
+    stroke-width: 2px;
+    stroke: rgb(30,139,205);
+    transition: all 0.2s;
 }

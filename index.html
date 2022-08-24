@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer" />
+    <meta name="keywords" content="慕课答案,答案,中国大学MOOC,慕课答案查询">
+    <meta name="referrer" content="no-referrer">
     <title>GinsMooc</title>
-    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://ginnnnnn.top/ico/favicon.ico" type="image/x-icon" />
+    
     <style cssr-id="naive-ui/global">
         body {
             display: flex;
@@ -34,15 +36,27 @@
     <link rel="stylesheet" type="text/css" href="./css/header/header.css">
     <link rel="stylesheet" type="text/css" href="./css/sidebar/sidebar.css">
     <link rel="stylesheet" type="text/css" href="./css/main/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/float.css">
     <script src="https://cdn.staticfile.org/jquery/2.0.3/jquery.min.js"></script>
     <script src="./src/index.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?803f8581ce82c43a7f51eab256958890";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
 </head>
 <body>
     <div class="wrapper">
         <div class="header">
             <div class="header-nav">
-                <div class="header-nav__start"></div>
-                <div class="header-nav__center"></div>
+                <div class="header-nav__start" style="width:350px;"></div>
+                <div class="header-nav__center">
+                </div>
                 <div class="header-nav__end">
                     <img class="header-nav__end-feedback" src="./image/feedback.svg" style="border-radius:0;">
                     <div class="feedback-window hidden">
@@ -65,6 +79,12 @@
                     <ul class="sidebar__body-list"></ul>
                 </div>
                 <div class="sidebar__footer">
+                    <div class="sidebar__add-course">
+                        <svg viewBox="0 0 21 21" height="21px" width="21px">
+                            <line x1="0" y1="10" x2="20" y2="10"></line>
+                            <line x1="10" y1="0" x2="10" y2="20"></line>
+                        </svg>
+                    </div>
                     <div class="sidebar__footer-fold">
                         <input type="checkbox" name="sidebar-fold" id="sidebar-fold">
                         <label for="sidebar-fold">
@@ -95,6 +115,22 @@
                 </div>
                 <div class="main__body"></div>
             </div>
+        </div>
+    </div>
+    <div class="float hidden">
+        <div class="add-course-window hidden">
+            <div class="add-course-close">
+                <svg viewBox="0 0 9 9" height="9px" width="9px">
+                    <line x1="0" y1="0" x2="9" y2="9"></line>
+                    <line x1="0" y1="9" x2="9" y2="0"></line>
+                </svg>
+            </div>
+            <input id="add-course-input" placeholder="在这里输入课程代码">
+            <a id="add-course-submit">确认</a>
+        </div>
+        <div class="help hidden">
+            <img class="help-1 hidden" src="./image/help-1.png" style="z-index: 10;">
+            <img class="help-2 hidden" src="./image/help-2.png" style="z-index: 9;">
         </div>
     </div>
 </body>

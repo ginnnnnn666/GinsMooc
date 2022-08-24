@@ -1,6 +1,7 @@
 /* main */
 .main__header {
     height: 50px;
+    max-width: calc(100vw - 165px);
     display: flex;
     padding: 10px 20px;
     box-sizing: border-box;
