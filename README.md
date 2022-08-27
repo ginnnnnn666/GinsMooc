@@ -10,6 +10,8 @@
 
 <img src="./image/help-2.png">
 
+<img src="./image/help-3.png">
+
 # 插件
 
 下载地址：https://ginnnnnn.top/mooc/extension/download/GinsMooc.zip
@@ -40,6 +42,6 @@
 
 1. 由于技术限制，测验中的填空题无法做到精确匹配，故暂不提供在当前页直接显示答案的功能
 2. 提示 “并发限制” 是因为鼠标点击过快
-3. 若无法获取答案，请尝试刷新页面再重新获取
+3. **若显示查询失败，请尝试刷新重试**
 4. 若出现任何问题，请及时前往[主页](https://ginnnnnn.top/mooc/)反馈问题
 5. **该插件将只会在课程页面生效，且不会上传任何个人信息**
