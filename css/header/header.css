@@ -6,8 +6,14 @@
     padding: 0 20px;
     box-shadow: rgb(231, 234, 239) 0px -1px 0px 0px inset;
 }
+.header-nav__start {
+    min-width: 355px;
+}
 .header-nav__center {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .header-nav__end {
     display: flex;
