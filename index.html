@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="慕课答案,答案,中国大学MOOC,慕课答案查询">
-    <meta name="referrer" content="no-referrer">
+    <meta name="referrer" content="no-referrer" />
     <title>GinsMooc</title>
-    <link rel="shortcut icon" href="https://ginnnnnn.top/ico/favicon.ico" type="image/x-icon" />
-    
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon" />
     <style cssr-id="naive-ui/global">
         body {
             display: flex;
@@ -38,27 +36,18 @@
     <link rel="stylesheet" type="text/css" href="./css/main/main.css">
     <link rel="stylesheet" type="text/css" href="./css/float.css">
     <script src="https://cdn.staticfile.org/jquery/2.0.3/jquery.min.js"></script>
-    <script src="./src/index.js"></script>
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?803f8581ce82c43a7f51eab256958890";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-
+    <script src="./src/index-gin.js"></script>
 </head>
 <body>
     <div class="wrapper">
         <div class="header">
             <div class="header-nav">
-                <div class="header-nav__start" style="width:350px;"></div>
+                <div class="header-nav__start"></div>
                 <div class="header-nav__center">
-                    <span id="tips" style="font-size: 14px; color:rgb(30,139,205);">每天会定时更新测试列表</span>
+                    <span id="tips" style="font-size: 14px; color:rgb(30,139,205);">每天会定时更新测验列表</span>
                 </div>
                 <div class="header-nav__end">
+                    <img class="header-nav__end-wordCloud" src="./image/wordCloud.svg">
                     <img class="header-nav__end-feedback" src="./image/feedback.svg" style="border-radius:0;">
                     <div class="feedback-window hidden">
                         <textarea id="feedback-editor" maxlength="200" placeholder="在这里输入建议或反馈，如果是反馈请说明出现问题的具体课程、哪个测验/作业/考试。最大长度为200字。"></textarea>
@@ -106,7 +95,7 @@
                 </div>
             </div>
             <div class="main">
-                <div class="main__header">
+                <div class="main__header" style="max-width: calc(100vw - 355px);">
                     <div class="main__header-title"></div>
                     <div class="main__header-switch-column">
                         <input type="checkbox" name="switch-column" id="switch-column">
@@ -144,6 +133,7 @@
             <img class="help-1 hidden" src="./image/help-1.png" style="z-index: 10;">
             <img class="help-2 hidden" src="./image/help-2.png" style="z-index: 9;">
             <img class="help-3 hidden" src="./image/help-3.png" style="z-index: 8;">
+            <img class="help-4 hidden" src="./image/help-4.png" style="z-index: 7;">
         </div>
     </div>
 </body>
